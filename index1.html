@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-background": "#171c20",
+                        "on-secondary-container": "#3d657e",
+                        "surface-container-highest": "#dee3e8",
+                        "on-tertiary": "#ffffff",
+                        "secondary-container": "#b9e2ff",
+                        "tertiary": "#8d4f00",
+                        "surface": "#f5faff",
+                        "on-secondary": "#ffffff",
+                        "tertiary-fixed": "#ffdcc0",
+                        "surface-container-lowest": "#ffffff",
+                        "inverse-surface": "#2c3135",
+                        "tertiary-container": "#ea8c21",
+                        "secondary": "#3a637c",
+                        "secondary-fixed-dim": "#a3cce8",
+                        "error-container": "#ffdad6",
+                        "inverse-on-surface": "#ecf1f7",
+                        "on-primary": "#ffffff",
+                        "on-tertiary-fixed": "#2d1600",
+                        "surface-container-high": "#e4e9ee",
+                        "primary-fixed-dim": "#82cfff",
+                        "on-surface": "#171c20",
+                        "primary-container": "#00aeef",
+                        "surface-bright": "#f5faff",
+                        "on-primary-fixed": "#001e2d",
+                        "surface-variant": "#dee3e8",
+                        "on-tertiary-fixed-variant": "#6b3b00",
+                        "on-secondary-fixed-variant": "#204b63",
+                        "error": "#ba1a1a",
+                        "primary-fixed": "#c6e7ff",
+                        "outline": "#6e7881",
+                        "on-primary-fixed-variant": "#004c6b",
+                        "on-tertiary-container": "#572f00",
+                        "surface-tint": "#00658d",
+                        "tertiary-fixed-dim": "#ffb876",
+                        "on-secondary-fixed": "#001e2d",
+                        "on-surface-variant": "#3e4850",
+                        "primary": "#00658d",
+                        "inverse-primary": "#82cfff",
+                        "on-error-container": "#93000a",
+                        "surface-container-low": "#eff4fa",
+                        "surface-dim": "#d6dae0",
+                        "outline-variant": "#bdc8d1",
+                        "on-primary-container": "#003e58",
+                        "surface-container": "#eaeef4",
+                        "secondary-fixed": "#c6e7ff",
+                        "background": "#f5faff",
+                        "on-error": "#ffffff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Manrope"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3 { font-family: 'Manrope', sans-serif; }
+    </style>
+</head>
+<body class="bg-surface text-on-surface selection:bg-primary-container/30">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-surface/70 backdrop-blur-md shadow-sm">
+<div class="flex justify-between items-center px-8 py-4 max-w-screen-2xl mx-auto">
+<div class="text-xl font-bold tracking-tighter text-on-surface">EWAN ALMUTAMAIZ</div>
+<div class="hidden md:flex items-center space-x-8">
+<a class="text-on-surface-variant font-body text-sm tracking-tight hover:text-primary transition-all duration-300" href="../home_page/index.html">Home</a>
+<a class="text-on-surface-variant font-body text-sm tracking-tight hover:text-primary transition-all duration-300" href="../car_listings/index.html?category=normal">Normal Cars</a>
+<a class="text-sky-600 font-bold border-b-2 border-sky-500 font-body text-sm tracking-tight" href="../car_listings/index.html?category=luxury">Luxury Cars</a>
+<a class="text-on-surface-variant font-body text-sm tracking-tight hover:text-primary transition-all duration-300" href="#footer">Contact</a>
+</div>
+<div class="flex items-center space-x-4">
+<div class="relative hidden lg:block">
+<input class="bg-surface-container-highest border-none rounded-full px-6 py-2 text-sm focus:ring-2 focus:ring-primary-fixed-dim outline-none w-64 transition-all" placeholder="Search inventory..." type="text"/>
+<span class="material-symbols-outlined absolute right-4 top-1/2 -translate-y-1/2 text-on-surface-variant text-sm" data-icon="search">search</span>
+</div>
+<button class="bg-gradient-to-br from-primary to-primary-container text-on-primary px-8 py-2 rounded-lg font-semibold text-sm hover:scale-95 transition-transform">Login</button>
+</div>
+</div>
+</nav>
+<main class="pt-24 pb-20 px-8 max-w-screen-2xl mx-auto">
+<!-- Hero Section -->
+<header class="mb-16">
+<div class="bg-surface-container-low rounded-xl p-12 relative overflow-hidden flex flex-col md:flex-row items-center gap-12">
+<div class="flex-1 z-10">
+<span class="text-primary-container font-bold tracking-widest text-xs uppercase mb-4 block">Premium Selection</span>
+<h1 class="text-5xl md:text-6xl font-extrabold tracking-tighter text-on-surface mb-6 leading-tight">Luxury Fleet &amp; <br/> Daily Excellence.</h1>
+<p class="text-on-surface-variant text-lg max-w-md leading-relaxed font-body">Explore our curated collection of high-performance luxury vehicles and reliable daily drivers tailored for the modern road.</p>
+</div>
+<div class="flex-1 relative">
+<div class="absolute -inset-4 bg-primary-container/10 blur-3xl rounded-full"></div>
+<img alt="Luxury Sports Car" class="relative z-10 w-full h-auto object-cover rounded-lg shadow-2xl rotate-2 hover:rotate-0 transition-transform duration-500" data-alt="Sleek white luxury sports car parked on a modern driveway under soft dusk lighting with glowing headlights and high-end reflections." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAGbVOII1nnGx7FN4a-n-VLF9SwSO5hEawz8oQQEEEA7Y_cUAyJ5nezItaB9x-DH_Thym1IjO8n1eoq5lqCd3djxG7YkMQcfchP_Zhmibupn2moznfAFc1fDwlPyn1Q13lZEb_11PEpbQUW305a8-Djb8b5lTsYN5ejxCSCaQK80ucYK32j2PYgYiX6Amu95mnp0y8QmZ4LQppnfTJqGbsuBMU41MOov4TWfTz3iLNKruRq9bInxpcmoS8sR4zZZAHGrsMMdy78t3hW"/>
+</div>
+</div>
+</header>
+<!-- Filter & Categories Shell -->
+<section class="mb-12">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-6 border-b border-outline-variant/15 pb-8">
+<!-- Category Tabs -->
+<div class="flex p-1.5 bg-surface-container-high rounded-full w-fit">
+<button id="btn-luxury" class="px-8 py-2.5 rounded-full text-sm font-semibold transition-all bg-surface shadow-sm text-on-surface">Luxury Cars</button>
+<button id="btn-normal" class="px-8 py-2.5 rounded-full text-sm font-medium text-on-surface-variant hover:text-primary transition-all">Normal Cars</button>
+</div>
+<!-- Functional Filters -->
+<div class="flex items-center gap-4">
+<div class="flex items-center gap-2 px-4 py-2 bg-surface-container-low rounded-lg text-sm font-medium text-on-surface-variant">
+<span class="material-symbols-outlined text-sm" data-icon="filter_list">filter_list</span>
+<span>Price: High to Low</span>
+</div>
+<div class="flex items-center gap-2 px-4 py-2 bg-surface-container-low rounded-lg text-sm font-medium text-on-surface-variant">
+<span class="material-symbols-outlined text-sm" data-icon="calendar_month">calendar_month</span>
+<span>Year: 2023+</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Grid of Car Cards -->
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-12">
+<!-- Card 1 -->
+<div class="group bg-surface-container-lowest rounded-lg overflow-hidden transition-all duration-500 hover:translate-y-[-8px]">
+<div class="relative h-72 overflow-hidden">
+<img alt="Mercedes G-Wagon" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Matte black Mercedes G-Wagon parked in a high-end urban environment with dramatic shadows and sharp lines." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBUkyvsYhcZvy0vFKjDgEpgnG1x4L7HjD-goghLmD5W-kUv3A65U0Emb4Dtj-JjYBRC_1GEYNN961yFfr5MRRGd9PBmxUSYGnBY4lXnCOK6BSuqWvSUWDU5ctRu3wihvmA7H5ZgXxv13j9YgD-_w9Fqvh18thYjOhWAGfZVPoiFHIhqWROUWMtAsLP_hyvI6bXI7Gz5551aVUGcIyi-w8ETQOzNObDpoiubhDMaJO7xKb58TB0M2JiQo52HFUH6yrqx5WPDl-MAqtwS"/>
+<div class="absolute top-4 right-4 bg-surface/80 backdrop-blur-md px-4 py-1.5 rounded-full text-xs font-bold text-primary shadow-sm">
+                        LUXURY
+                    </div>
+</div>
+<div class="p-8">
+<div class="flex justify-between items-start mb-4">
+<div>
+<h3 class="text-2xl font-bold tracking-tight text-on-surface">Mercedes G-Wagon</h3>
+<span class="text-on-surface-variant text-sm font-label">2024 • G 63 AMG</span>
+</div>
+<span class="text-2xl font-extrabold text-primary-container">$180,000</span>
+</div>
+<p class="text-on-surface-variant text-sm leading-relaxed mb-8 line-clamp-2">
+                        The ultimate statement of power and luxury. Featuring a hand-crafted twin-turbo V8 and iconic rugged design.
+                    </p>
+<div class="flex items-center gap-4 mb-8">
+<div class="flex items-center gap-1.5 px-3 py-1 bg-secondary-container/30 rounded-md text-[11px] font-bold text-on-secondary-container">
+<span class="material-symbols-outlined text-xs" data-icon="speed">speed</span> 585 HP
+                        </div>
+<div class="flex items-center gap-1.5 px-3 py-1 bg-secondary-container/30 rounded-md text-[11px] font-bold text-on-secondary-container">
+<span class="material-symbols-outlined text-xs" data-icon="settings">settings</span> AUTOMATIC
+                        </div>
+</div>
+<button class="w-full py-4 bg-surface-container-high text-on-surface font-bold rounded-lg hover:bg-primary-container hover:text-on-primary transition-all duration-300">
+                        View Details
+                    </button>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="group bg-surface-container-lowest rounded-lg overflow-hidden transition-all duration-500 hover:translate-y-[-8px]">
+<div class="relative h-72 overflow-hidden">
+<img alt="Range Rover Sport" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Side profile of a metallic grey Range Rover Sport driving on a mountain road at sunset with golden light reflections." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBAYFhEiZmJ3KCylDg0EeRiSXrGHUlciComLh891sH9xVQXB10YKtzJ3qOIPJ-BB3MkO8-TCCtYpm6zLoZtutkgWBfM5TJ5UK2SIcufTEXpzq5bHR7wqxL-gUju0nh6jdAGjuytJFDjULaMPTHQ7hKAkNhQGVqwvHuwKmvz2xCzZ9nl8lQpeM7zyq8u5nKHS67pJ_uOx7d8_LWTU8BuPDOyMyqympk3N8ztMAVesq4iA3qfkPbh9ZLWSME8-4BBCvwnQbFym4bMCoKR"/>
+<div class="absolute top-4 right-4 bg-surface/80 backdrop-blur-md px-4 py-1.5 rounded-full text-xs font-bold text-primary shadow-sm">
+                        LUXURY
+                    </div>
+</div>
+<div class="p-8">
+<div class="flex justify-between items-start mb-4">
+<div>
+<h3 class="text-2xl font-bold tracking-tight text-on-surface">Range Rover Sport</h3>
+<span class="text-on-surface-variant text-sm font-label">2023 • Dynamic SE</span>
+</div>
+<span class="text-2xl font-extrabold text-primary-container">$115,000</span>
+</div>
+<p class="text-on-surface-variant text-sm leading-relaxed mb-8 line-clamp-2">
+                        Unmatched refinement meets off-road capability. The perfect balance for urban luxury and adventurous spirits.
+                    </p>
+<div class="flex items-center gap-4 mb-8">
+<div class="flex items-center gap-1.5 px-3 py-1 bg-secondary-container/30 rounded-md text-[11px] font-bold text-on-secondary-container">
+<span class="material-symbols-outlined text-xs" data-icon="ev_station">ev_station</span> HYBRID
+                        </div>
+<div class="flex items-center gap-1.5 px-3 py-1 bg-secondary-container/30 rounded-md text-[11px] font-bold text-on-secondary-container">
+<span class="material-symbols-outlined text-xs" data-icon="chair">chair</span> 5 SEATER
+                        </div>
+</div>
+<button class="w-full py-4 bg-surface-container-high text-on-surface font-bold rounded-lg hover:bg-primary-container hover:text-on-primary transition-all duration-300">
+                        View Details
+                    </button>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="group bg-surface-container-lowest rounded-lg overflow-hidden transition-all duration-500 hover:translate-y-[-8px]">
+<div class="relative h-72 overflow-hidden">
+<img alt="BMW M4 Competition" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="A vivid yellow BMW M4 Competition showing its aggressive front grille and sleek headlights in a studio setting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC0uedHoVezaBUvZrqteEPcnoehJSa3nGu0ikGIX3TNyH6S6B91Q67OsESdykUh8SewPfi-O_y4naopWVD6C3qIIIT5z7IY095PJYyIdCdvKzwJMGuJCeoWUR8bLIhF9hXq9hrOhlJqTSlXXIVTR3E07sIO80b461bUctTIN8WoYIal1HkhYgUhIgwHhBThJTgmRENiogxawBczWCrnqMTB2ggHqgjpx29ziUzQNwz6nL_J2sO_KQcKk2CCFbUe6vFMhTmk-GH5OtJB"/>
+<div class="absolute top-4 right-4 bg-surface/80 backdrop-blur-md px-4 py-1.5 rounded-full text-xs font-bold text-primary shadow-sm">
+                        SPORT
+                    </div>
+</div>
+<div class="p-8">
+<div class="flex justify-between items-start mb-4">
+<div>
+<h3 class="text-2xl font-bold tracking-tight text-on-surface">BMW M4 Comp.</h3>
+<span class="text-on-surface-variant text-sm font-label">2024 • M xDrive</span>
+</div>
+<span class="text-2xl font-extrabold text-primary-container">$95,000</span>
+</div>
+<p class="text-on-surface-variant text-sm leading-relaxed mb-8 line-clamp-2">
+                        Precision engineering designed for the track, refined for the street. A true driver's machine with 503 HP.
+                    </p>
+<div class="flex items-center gap-4 mb-8">
+<div class="flex items-center gap-1.5 px-3 py-1 bg-secondary-container/30 rounded-md text-[11px] font-bold text-on-secondary-container">
+<span class="material-symbols-outlined text-xs" data-icon="timer">timer</span> 3.4s 0-100
+                        </div>
+<div class="flex items-center gap-1.5 px-3 py-1 bg-secondary-container/30 rounded-md text-[11px] font-bold text-on-secondary-container">
+<span class="material-symbols-outlined text-xs" data-icon="mode_fan">mode_fan</span> CARBON INT.
+                        </div>
+</div>
+<button class="w-full py-4 bg-surface-container-high text-on-surface font-bold rounded-lg hover:bg-primary-container hover:text-on-primary transition-all duration-300">
+                        View Details
+                    </button>
+</div>
+</div>
+<!-- Card 4 (Normal Car Example) -->
+<div class="group bg-surface-container-lowest rounded-lg overflow-hidden transition-all duration-500 hover:translate-y-[-8px]">
+<div class="relative h-72 overflow-hidden">
+<img alt="Toyota Camry" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Clean white Toyota Camry sedan parked in a bright suburban parking area with soft natural daylight." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDXmi_o9uPoMdVJMVE0gFZ_1uWLfpNuxtWnNrAhO3OrK_luhHIG-3uUpkgwjUQghpvf4VPj4z2C6ozp4p4zJRt9c0xlBXpwl0QP7b_AwA5dnBav7ztGODyTdvjzfzBAmDHlknX0stdA-H97y3SpQDgFd8HaR1ldFuAymuSGIEuvCo2m1xW5BuFIqpdqjDZ794LvxLNi0pKgKW1KJ4Yaow0WYeSzGb6PzEBlYpMEzzXFjKNqa4Gd7lNKlWG03gOC4zlBPnIF4nYyx93V"/>
+<div class="absolute top-4 right-4 bg-surface/80 backdrop-blur-md px-4 py-1.5 rounded-full text-xs font-bold text-on-surface-variant shadow-sm">
+                        NORMAL
+                    </div>
+</div>
+<div class="p-8">
+<div class="flex justify-between items-start mb-4">
+<div>
+<h3 class="text-2xl font-bold tracking-tight text-on-surface">Toyota Camry</h3>
+<span class="text-on-surface-variant text-sm font-label">2024 • GLE Hybrid</span>
+</div>
+<span class="text-2xl font-extrabold text-primary-container">$34,500</span>
+</div>
+<p class="text-on-surface-variant text-sm leading-relaxed mb-8 line-clamp-2">
+                        Reliability you can trust. The new Camry Hybrid offers exceptional fuel efficiency without compromising comfort.
+                    </p>
+<div class="flex items-center gap-4 mb-8">
+<div class="flex items-center gap-1.5 px-3 py-1 bg-secondary-container/30 rounded-md text-[11px] font-bold text-on-secondary-container">
+<span class="material-symbols-outlined text-xs" data-icon="eco">eco</span> 26 KM/L
+                        </div>
+<div class="flex items-center gap-1.5 px-3 py-1 bg-secondary-container/30 rounded-md text-[11px] font-bold text-on-secondary-container">
+<span class="material-symbols-outlined text-xs" data-icon="shield_with_heart">shield_with_heart</span> SAFETY+
+                        </div>
+</div>
+<button class="w-full py-4 bg-surface-container-high text-on-surface font-bold rounded-lg hover:bg-primary-container hover:text-on-primary transition-all duration-300">
+                        View Details
+                    </button>
+</div>
+</div>
+<!-- Card 5 -->
+<div class="group bg-surface-container-lowest rounded-lg overflow-hidden transition-all duration-500 hover:translate-y-[-8px]">
+<div class="relative h-72 overflow-hidden">
+<img alt="Tesla Model S Plaid" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Tesla Model S in deep blue metallic paint charging at a sleek modern supercharger station at night." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB2QYGUGIfEtX1QuoaNS7JbFz17MQParDfG3qkOY5vY4rFP6awr6yEEoGuIru1Pxj7dSRwhyzzAF52mpcsgG1UpHcBtKCbI73XM1SokilrfRFyNz-eYUcps63hW07u8or2C35yqJcmPvMs_GAqXNURbCuV9_TwtOaj7PhC-a7JhMctSdyiNjvwCO5mfTBjVpCR-Y2N0KoaC8ONLVnkOlPQ0bsHg8t8KcOdMTGTPnQz-_OqRqMQECQBmMxdgIe00IaVMzh8hlDBEHWdp"/>
+<div class="absolute top-4 right-4 bg-surface/80 backdrop-blur-md px-4 py-1.5 rounded-full text-xs font-bold text-primary shadow-sm">
+                        ELECTRIC
+                    </div>
+</div>
+<div class="p-8">
+<div class="flex justify-between items-start mb-4">
+<div>
+<h3 class="text-2xl font-bold tracking-tight text-on-surface">Tesla Model S Plaid</h3>
+<span class="text-on-surface-variant text-sm font-label">2024 • All-Wheel Drive</span>
+</div>
+<span class="text-2xl font-extrabold text-primary-container">$102,000</span>
+</div>
+<p class="text-on-surface-variant text-sm leading-relaxed mb-8 line-clamp-2">
+                        Experience the future of speed. 1,020 horsepower and a 0-60 mph in under 2 seconds. The fastest production car.
+                    </p>
+<div class="flex items-center gap-4 mb-8">
+<div class="flex items-center gap-1.5 px-3 py-1 bg-secondary-container/30 rounded-md text-[11px] font-bold text-on-secondary-container">
+<span class="material-symbols-outlined text-xs" data-icon="electric_car">electric_car</span> 637 KM RANGE
+                        </div>
+<div class="flex items-center gap-1.5 px-3 py-1 bg-secondary-container/30 rounded-md text-[11px] font-bold text-on-secondary-container">
+<span class="material-symbols-outlined text-xs" data-icon="rocket_launch">rocket_launch</span> 1020 HP
+                        </div>
+</div>
+<button class="w-full py-4 bg-surface-container-high text-on-surface font-bold rounded-lg hover:bg-primary-container hover:text-on-primary transition-all duration-300">
+                        View Details
+                    </button>
+</div>
+</div>
+<!-- Card 6 -->
+<div class="group bg-surface-container-lowest rounded-lg overflow-hidden transition-all duration-500 hover:translate-y-[-8px]">
+<div class="relative h-72 overflow-hidden">
+<img alt="Audi RS7" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Nardo gray Audi RS7 parked on a rainy city street with neon light reflections on its smooth surfaces." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBChhZvnUjhhMvhXiDmpqBTbGoiME-CPKdnru1oNrwO8WnFHrFxr8vIzVohJ1D-P72cP25rd7U5SGfgEXr2v1UTgw2FmWjwZ_LePu8t_Os3urQr5qmjvKaEMHJfLcE0D-Nm8l9PXgmZKAsuaY1zvjyGhw_b6iF1y4vXeEHdVd30zi_y4Y_fHgG7wknG-htZ_585_uSSZ78JG2DFkedgOyv6YLGndD924-BatCknGBYs84E4FlpYIprfY-ZYDZANjhYq6mRvYwcwoMXE"/>
+<div class="absolute top-4 right-4 bg-surface/80 backdrop-blur-md px-4 py-1.5 rounded-full text-xs font-bold text-primary shadow-sm">
+                        LUXURY
+                    </div>
+</div>
+<div class="p-8">
+<div class="flex justify-between items-start mb-4">
+<div>
+<h3 class="text-2xl font-bold tracking-tight text-on-surface">Audi RS7</h3>
+<span class="text-on-surface-variant text-sm font-label">2023 • Sportback</span>
+</div>
+<span class="text-2xl font-extrabold text-primary-container">$125,000</span>
+</div>
+<p class="text-on-surface-variant text-sm leading-relaxed mb-8 line-clamp-2">
+                        Sophisticated design meets brutal performance. A high-performance luxury sedan that commands attention.
+                    </p>
+<div class="flex items-center gap-4 mb-8">
+<div class="flex items-center gap-1.5 px-3 py-1 bg-secondary-container/30 rounded-md text-[11px] font-bold text-on-secondary-container">
+<span class="material-symbols-outlined text-xs" data-icon="grid_view">grid_view</span> QUATTRO
+                        </div>
+<div class="flex items-center gap-1.5 px-3 py-1 bg-secondary-container/30 rounded-md text-[11px] font-bold text-on-secondary-container">
+<span class="material-symbols-outlined text-xs" data-icon="volume_up">volume_up</span> B&amp;O SOUND
+                        </div>
+</div>
+<button class="w-full py-4 bg-surface-container-high text-on-surface font-bold rounded-lg hover:bg-primary-container hover:text-on-primary transition-all duration-300">
+                        View Details
+                    </button>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer id="footer" class="w-full bg-surface-container-low border-t-0">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-8 px-12 py-16 max-w-screen-2xl mx-auto">
+<div class="space-y-6">
+<div class="text-lg font-extrabold text-on-surface">EWAN ALMUTAMAIZ</div>
+<p class="text-on-surface-variant/70 text-sm font-body leading-relaxed">
+                    Elevating the automotive experience through excellence, transparency, and a curated selection of world-class vehicles.
+                </p>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-primary hover:scale-110 cursor-pointer transition-all" data-icon="public">public</span>
+<span class="material-symbols-outlined text-primary hover:scale-110 cursor-pointer transition-all" data-icon="mail">mail</span>
+<span class="material-symbols-outlined text-primary hover:scale-110 cursor-pointer transition-all" data-icon="phone_in_talk">phone_in_talk</span>
+</div>
+</div>
+<div class="space-y-4">
+<h4 class="text-on-surface font-bold text-sm">Quick Links</h4>
+<ul class="space-y-2">
+<li><a class="text-on-surface-variant/70 text-sm hover:text-primary transition-colors" href="#">About Us</a></li>
+<li><a class="text-on-surface-variant/70 text-sm hover:text-primary transition-colors font-semibold text-sky-500" href="#">Inventory</a></li>
+<li><a class="text-on-surface-variant/70 text-sm hover:text-primary transition-colors" href="../car_listings/index.html?category=normal">Normal Cars</a></li>
+<li><a class="text-on-surface-variant/70 text-sm hover:text-primary transition-colors" href="../car_listings/index.html?category=luxury">Luxury Cars</a></li>
+</ul>
+</div>
+<div class="space-y-4">
+<h4 class="text-on-surface font-bold text-sm">Customer Support</h4>
+<ul class="space-y-2">
+<li><a class="text-on-surface-variant/70 text-sm hover:text-primary transition-colors" href="#">Privacy Policy</a></li>
+<li><a class="text-on-surface-variant/70 text-sm hover:text-primary transition-colors" href="#">Terms of Service</a></li>
+<li><a class="text-on-surface-variant/70 text-sm hover:text-primary transition-colors" href="#" href="#footer">Contact Support</a></li>
+<li><a class="text-on-surface-variant/70 text-sm hover:text-primary transition-colors" href="#">FAQ</a></li>
+</ul>
+</div>
+<div class="space-y-4">
+<h4 class="text-on-surface font-bold text-sm">Newsletter</h4>
+<p class="text-on-surface-variant/70 text-sm">Subscribe for new arrival alerts.</p>
+<div class="flex bg-surface-container-highest rounded-full p-1 border border-outline-variant/10">
+<input class="bg-transparent border-none focus:ring-0 text-xs px-4 flex-grow" placeholder="Email address" type="email"/>
+<button class="bg-primary text-on-primary px-4 py-2 rounded-full text-xs font-bold">Join</button>
+</div>
+</div>
+</div>
+<div class="max-w-screen-2xl mx-auto px-12 py-8 border-t border-outline-variant/5">
+<p class="text-on-surface-variant/70 text-sm font-inter text-center md:text-left">
+                © 2024 EWAN ALMUTAMAIZ GENERAL TRADING. All rights reserved.
+            </p>
+</div>
+</footer>
+
+    <!-- Floating Interactive WhatsApp Button -->
+    <a href="https://wa.me/97150" target="_blank"
+       class="fixed bottom-8 right-8 z-50 group flex items-center justify-center w-16 h-16 rounded-full shadow-[0_8px_30px_rgb(37,211,102,0.4)] transition-all duration-300 hover:scale-110 hover:-translate-y-2 animate-bounce hover:animate-none">
+        <span class="absolute right-full mr-4 bg-surface-container-highest text-on-surface text-sm font-bold px-4 py-2 rounded-lg shadow-lg opacity-0 translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300 whitespace-nowrap pointer-events-none">
+            Chat with us!
+        </span>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" class="w-16 h-16 drop-shadow-lg" />
+    </a>
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const params = new URLSearchParams(window.location.search);
+    const initialCategory = params.get('category');
+    
+    // Chips 
+    const luxuryBtn = document.getElementById("btn-luxury");
+    const normalBtn = document.getElementById("btn-normal");
+    
+    // Navbar links
+    const navLinks = document.querySelectorAll("nav a");
+    let navNormal, navLuxury;
+    navLinks.forEach(a => {
+        if (a.textContent.trim() === "Normal Cars") navNormal = a;
+        if (a.textContent.trim() === "Luxury Cars") navLuxury = a;
+    });
+
+    const cards = document.querySelectorAll(".grid > .group");
+    cards.forEach(card => {
+        const text = card.textContent.toLowerCase();
+        if (text.includes("luxury") || text.includes("electric") || text.includes("sport") || text.includes("performance")) {
+            card.setAttribute("data-type", "luxury");
+        } else {
+            card.setAttribute("data-type", "normal");
+        }
+    });
+
+    function filterCars(category) {
+        if (!category) category = 'luxury'; // default
+        
+        // Update Chips highlighting
+        if(category === 'luxury') {
+            if(luxuryBtn) {
+                luxuryBtn.classList.remove('text-on-surface-variant', 'hover:text-primary');
+                luxuryBtn.classList.add('bg-surface', 'shadow-sm', 'text-on-surface');
+            }
+            if(normalBtn) {
+                normalBtn.classList.remove('bg-surface', 'shadow-sm', 'text-on-surface');
+                normalBtn.classList.add('text-on-surface-variant', 'hover:text-primary');
+            }
+            
+            // Update Navbar highlighting
+            if(navLuxury) {
+                navLuxury.classList.remove('text-on-surface-variant', 'hover:text-primary', 'font-body', 'font-manrope');
+                navLuxury.classList.add('text-sky-600', 'font-bold', 'border-b-2', 'border-sky-500', 'py-1');
+            }
+            if(navNormal) {
+                navNormal.classList.remove('text-sky-600', 'font-bold', 'border-b-2', 'border-sky-500', 'py-1');
+                navNormal.classList.add('text-on-surface-variant', 'hover:text-primary');
+            }
+
+        } else {
+            if(normalBtn) {
+                normalBtn.classList.remove('text-on-surface-variant', 'hover:text-primary');
+                normalBtn.classList.add('bg-surface', 'shadow-sm', 'text-on-surface');
+            }
+            if(luxuryBtn) {
+                luxuryBtn.classList.remove('bg-surface', 'shadow-sm', 'text-on-surface');
+                luxuryBtn.classList.add('text-on-surface-variant', 'hover:text-primary');
+            }
+            
+            // Update Navbar highlighting
+            if(navNormal) {
+                navNormal.classList.remove('text-on-surface-variant', 'hover:text-primary', 'font-body', 'font-manrope');
+                navNormal.classList.add('text-sky-600', 'font-bold', 'border-b-2', 'border-sky-500', 'py-1');
+            }
+            if(navLuxury) {
+                navLuxury.classList.remove('text-sky-600', 'font-bold', 'border-b-2', 'border-sky-500', 'py-1');
+                navLuxury.classList.add('text-on-surface-variant', 'hover:text-primary');
+            }
+        }
+
+        cards.forEach(card => {
+            if (card.getAttribute("data-type") === category) {
+                card.style.display = "block";
+            } else {
+                card.style.display = "none";
+            }
+        });
+    }
+
+    if(luxuryBtn) luxuryBtn.addEventListener('click', () => filterCars('luxury'));
+    if(normalBtn) normalBtn.addEventListener('click', () => filterCars('normal'));
+    
+    // Also hijack navbar clicks to avoid page reloading if we are already in car_listings
+    if(navLuxury) {
+        navLuxury.addEventListener('click', (e) => {
+            e.preventDefault();
+            window.history.pushState({}, '', '?category=luxury');
+            filterCars('luxury');
+        });
+    }
+    if(navNormal) {
+        navNormal.addEventListener('click', (e) => {
+            e.preventDefault();
+            window.history.pushState({}, '', '?category=normal');
+            filterCars('normal');
+        });
+    }
+
+    filterCars(initialCategory || 'luxury'); 
+});
+</script>
+</body>

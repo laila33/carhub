@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>EWAN ALMUTAMAIZ GENERAL TRADING</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="../car_listings/index.html" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                "on-background": "#171c20",
+                "on-secondary-container": "#3d657e",
+                "surface-container-highest": "#dee3e8",
+                "on-tertiary": "#ffffff",
+                "secondary-container": "#b9e2ff",
+                "tertiary": "#8d4f00",
+                "surface": "#f5faff",
+                "on-secondary": "#ffffff",
+                "tertiary-fixed": "#ffdcc0",
+                "surface-container-lowest": "#ffffff",
+                "inverse-surface": "#2c3135",
+                "tertiary-container": "#ea8c21",
+                "secondary": "#3a637c",
+                "secondary-fixed-dim": "#a3cce8",
+                "error-container": "#ffdad6",
+                "inverse-on-surface": "#ecf1f7",
+                "on-primary": "#ffffff",
+                "on-tertiary-fixed": "#2d1600",
+                "surface-container-high": "#e4e9ee",
+                "primary-fixed-dim": "#82cfff",
+                "on-surface": "#171c20",
+                "primary-container": "#00aeef",
+                "surface-bright": "#f5faff",
+                "on-primary-fixed": "#001e2d",
+                "surface-variant": "#dee3e8",
+                "on-tertiary-fixed-variant": "#6b3b00",
+                "on-secondary-fixed-variant": "#204b63",
+                "error": "#ba1a1a",
+                "primary-fixed": "#c6e7ff",
+                "outline": "#6e7881",
+                "on-primary-fixed-variant": "#004c6b",
+                "on-tertiary-container": "#572f00",
+                "surface-tint": "#00658d",
+                "tertiary-fixed-dim": "#ffb876",
+                "on-secondary-fixed": "#001e2d",
+                "on-surface-variant": "#3e4850",
+                "primary": "#00658d",
+                "inverse-primary": "#82cfff",
+                "on-error-container": "#93000a",
+                "surface-container-low": "#eff4fa",
+                "surface-dim": "#d6dae0",
+                "outline-variant": "#bdc8d1",
+                "on-primary-container": "#003e58",
+                "surface-container": "#eaeef4",
+                "secondary-fixed": "#c6e7ff",
+                "background": "#f5faff",
+                "on-error": "#ffffff"
+            },
+            "borderRadius": {
+                "DEFAULT": "1rem",
+                "lg": "2rem",
+                "xl": "3rem",
+                "full": "9999px"
+            },
+            "fontFamily": {
+                "headline": ["Manrope"],
+                "body": ["Inter"],
+                "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, rgba(0, 101, 141, 0.9) 0%, rgba(0, 174, 239, 0.4) 100%);
+        }
+        .card-spec-blur {
+            backdrop-filter: blur(8px);
+            background: rgba(255, 255, 255, 0.7);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-50 bg-surface/70 dark:bg-slate-900/70 backdrop-blur-md shadow-sm dark:shadow-none">
+<nav class="flex justify-between items-center px-8 py-4 max-w-screen-2xl mx-auto">
+<div class="flex items-center gap-2">
+<span class="text-xl font-bold tracking-tighter text-on-surface dark:text-white font-headline">EWAN ALMUTAMAIZ</span>
+</div>
+<div class="hidden md:flex items-center gap-8 font-manrope text-sm tracking-tight">
+<a class="text-sky-600 dark:text-sky-400 font-bold border-b-2 border-sky-500 py-1 transition-all duration-300" href="../home_page/index.html">Home</a>
+<a class="text-on-surface-variant dark:text-slate-400 hover:text-sky-500 transition-all duration-300" href="../car_listings/index.html?category=normal">Normal Cars</a>
+<a class="text-on-surface-variant dark:text-slate-400 hover:text-sky-500 transition-all duration-300" href="../car_listings/index.html?category=luxury">Luxury Cars</a>
+<a class="text-on-surface-variant dark:text-slate-400 hover:text-sky-500 transition-all duration-300" href="#footer">Contact</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined text-on-surface-variant hover:bg-sky-50/50 p-2 rounded-full transition-all" data-icon="search">search</button>
+<button class="bg-primary text-on-primary px-6 py-2 rounded-full font-semibold text-sm hover:opacity-80 active:scale-95 transition-all">Login</button>
+</div>
+</nav>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative h-[921px] flex items-center justify-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img alt="Luxury Sports Car" class="w-full h-full object-cover" data-alt="Sleek silver high-end sports car parked on a coastal road at twilight with soft ambient lighting and reflections on the polished body" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAVit6AfqANJfQWLa38wdujGiuRjxdqtudy5rCHFsDXjFY9b14Lf6ePsBxKYe8YewSwb1eMvNbamJpsDETSQ7uSyqhj_-swdlbhC3wBP8xWLByloa8rEXFUHEy7dLUpclNw91IbDCptfQn6B1NwJMMF3nQRfP12njfkN2Si23NEFohFfmddwM7pXIPs0MenN29avHFQ-qLGnLNs1PQBL0nkc0bMWfEzsuRNLCK8gViK_W9X6ddiL2XhIbDAOPMksYCu6L2_7j14jYZi"/>
+<div class="absolute inset-0 hero-gradient"></div>
+</div>
+<div class="relative z-10 text-center px-6 max-w-4xl mx-auto">
+<h1 class="font-headline text-display-lg text-6xl md:text-8xl font-extrabold text-white tracking-tighter mb-6">
+                    Redefining <br/><span class="text-primary-fixed-dim">Automotive Luxury</span>
+</h1>
+<p class="text-white/90 text-lg md:text-xl font-light mb-12 max-w-2xl mx-auto leading-relaxed">
+                    Exquisite performance meets unparalleled elegance. Discover our curated collection of the world's most prestigious vehicles.
+                </p>
+<!-- Search Bar -->
+<div class="bg-surface-container-lowest p-2 md:p-3 rounded-full shadow-2xl flex flex-col md:flex-row items-center gap-2 max-w-3xl mx-auto">
+<div class="flex-1 flex items-center px-6 gap-3 border-r border-outline-variant/20">
+<span class="material-symbols-outlined text-sky-500" data-icon="directions_car">directions_car</span>
+<input class="w-full bg-transparent border-none focus:ring-0 text-on-surface placeholder:text-on-surface-variant/50 font-medium" placeholder="Make" type="text"/>
+</div>
+<div class="flex-1 flex items-center px-6 gap-3 border-r border-outline-variant/20">
+<span class="material-symbols-outlined text-sky-500" data-icon="model_training">model_training</span>
+<input class="w-full bg-transparent border-none focus:ring-0 text-on-surface placeholder:text-on-surface-variant/50 font-medium" placeholder="Model" type="text"/>
+</div>
+<div class="flex-1 flex items-center px-6 gap-3">
+<span class="material-symbols-outlined text-sky-500" data-icon="calendar_today">calendar_today</span>
+<input class="w-full bg-transparent border-none focus:ring-0 text-on-surface placeholder:text-on-surface-variant/50 font-medium" placeholder="Year" type="text"/>
+</div>
+<button class="bg-primary text-white p-4 md:px-8 rounded-full font-bold hover:bg-primary-container transition-all flex items-center gap-2">
+<span class="material-symbols-outlined" data-icon="search">search</span>
+<span class="hidden md:inline">Find Car</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Featured Cars Section -->
+<section class="py-24 bg-surface px-8">
+<div class="max-w-screen-2xl mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+<div>
+<span class="text-sky-500 font-bold tracking-widest text-sm uppercase mb-2 block">Curated Selection</span>
+<h2 class="font-headline text-4xl md:text-5xl font-extrabold text-on-surface tracking-tight">Featured Showroom</h2>
+</div>
+<a class="text-primary font-bold flex items-center gap-2 group" href="#">
+                        View Entire Inventory
+                        <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+<!-- Car Card 1 -->
+<div class="group relative bg-surface-container-low rounded-lg overflow-hidden transition-all duration-500 hover:-translate-y-2">
+<div class="aspect-[16/10] overflow-hidden">
+<img alt="Porsche 911" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Modern white Porsche 911 in a minimalist grey studio setting with soft top-down professional automotive lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA7pwwzkTW8By0WGJ9Yy9PmCB1fJDj-E6rit4zgo_5KSuW2FHrStQ6xQ1G_8wydwYe4uypvvm_Kk7l7okFuhBW0BjSmFcUK6cPX9NnKxOuJyN3xpzv2u9exvNCMJYTIo_uJOluX91hSBzXn3n-mZBonCOxSPNE-fedrZAzZxyW4BYqfdU9X_CsgBrQE5JilTA_TdbZXwKW-RwBpHDrNJLBAjmrWOty8QcVmF-hS8q6JasKmzMGGmZU93mbFs879v9V2YFJU8bqsfDoJ"/>
+</div>
+<div class="p-8">
+<div class="flex justify-between items-start mb-4">
+<div>
+<h3 class="font-headline text-2xl font-bold text-on-surface">Porsche 911 Carrera</h3>
+<p class="text-on-surface-variant/70 text-sm">2024 • Brand New</p>
+</div>
+<span class="bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider">Luxury</span>
+</div>
+<div class="grid grid-cols-2 gap-4 mb-8">
+<div class="flex items-center gap-2 text-on-surface-variant">
+<span class="material-symbols-outlined text-sky-500 text-lg" data-icon="speed">speed</span>
+<span class="text-sm font-medium">3.4s (0-100)</span>
+</div>
+<div class="flex items-center gap-2 text-on-surface-variant">
+<span class="material-symbols-outlined text-sky-500 text-lg" data-icon="settings">settings</span>
+<span class="text-sm font-medium">Automatic</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-6 border-t border-outline-variant/10">
+<span class="text-2xl font-bold text-primary">$114,400</span>
+<button onclick="window.open('https://wa.me/97150','_blank')" class="bg-on-surface text-white px-5 py-2 rounded-full text-sm font-bold hover:bg-sky-600 transition-colors">Details</button>
+</div>
+</div>
+</div>
+<!-- Car Card 2 -->
+<div class="group relative bg-surface-container-low rounded-lg overflow-hidden transition-all duration-500 hover:-translate-y-2">
+<div class="aspect-[16/10] overflow-hidden">
+<img alt="BMW M4" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Deep blue BMW M4 driving on a mountain pass with dramatic shadows and golden sunlight hitting the vehicle's curves" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBpdRQzsQNNZZj6PNEAYYY17m0usHGATSs9Pj6PJZZFCcVDRUpmLhDGx4rRKACDZzhQM72mecKcEoeyzCmY824f-TaIIVbY3IcWZ20PRvyUprl7y3atnjFX_zYtxKP-ZrCciLqwrAbGHlGA1pk0Ao4YR7DUFfdWdou8Ri9nRQXTKl6r2KftYBQ6Mneono6ABlPzXAvDiT4RkZsEE8vhH7qAch7WdhSp-SQ5SZOccjOzbezNCFwhroJM6rVLckgomY1oI0cIhBLTUjKR"/>
+</div>
+<div class="p-8">
+<div class="flex justify-between items-start mb-4">
+<div>
+<h3 class="font-headline text-2xl font-bold text-on-surface">BMW M4 Competition</h3>
+<p class="text-on-surface-variant/70 text-sm">2023 • 1,200 km</p>
+</div>
+<span class="bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider">Performance</span>
+</div>
+<div class="grid grid-cols-2 gap-4 mb-8">
+<div class="flex items-center gap-2 text-on-surface-variant">
+<span class="material-symbols-outlined text-sky-500 text-lg" data-icon="bolt">bolt</span>
+<span class="text-sm font-medium">503 HP</span>
+</div>
+<div class="flex items-center gap-2 text-on-surface-variant">
+<span class="material-symbols-outlined text-sky-500 text-lg" data-icon="local_gas_station">local_gas_station</span>
+<span class="text-sm font-medium">Petrol</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-6 border-t border-outline-variant/10">
+<span class="text-2xl font-bold text-primary">$82,700</span>
+<button onclick="window.open('https://wa.me/97150','_blank')" class="bg-on-surface text-white px-5 py-2 rounded-full text-sm font-bold hover:bg-sky-600 transition-colors">Details</button>
+</div>
+</div>
+</div>
+<!-- Car Card 3 -->
+<div class="group relative bg-surface-container-low rounded-lg overflow-hidden transition-all duration-500 hover:-translate-y-2">
+<div class="aspect-[16/10] overflow-hidden">
+<img alt="Audi RS7" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Sleek black Audi RS7 parked in a contemporary architectural setting with concrete walls and glass, evening lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuApmEoeQouhHgsDylQHigE8KbEQ69tDDl3AwGwjou1u4rCrFUj1MBBef4A_2ag8nbVKTMcab40aMYriGWDG7vrGQu9O86X9MaSsFQyBCHfn6JDtFt7z0d6Q8_f4hASF5RzM8cPJwCQQl19ypApZU4LmVJlhUdxeRFqnKVpGeT0lQjd_6_lKZrvuigyg4uomv028bUBVQ3-ytwxTYwCRUuBTxEb36ZtoiJHBpuMieDPNK_s3ka-xpst8wDN8Vt_qz-wQ-dJU1WY9pnbc"/>
+</div>
+<div class="p-8">
+<div class="flex justify-between items-start mb-4">
+<div>
+<h3 class="font-headline text-2xl font-bold text-on-surface">Audi RS7 Sportback</h3>
+<p class="text-on-surface-variant/70 text-sm">2024 • Brand New</p>
+</div>
+<span class="bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider">Luxury</span>
+</div>
+<div class="grid grid-cols-2 gap-4 mb-8">
+<div class="flex items-center gap-2 text-on-surface-variant">
+<span class="material-symbols-outlined text-sky-500 text-lg" data-icon="groups">groups</span>
+<span class="text-sm font-medium">5 Seats</span>
+</div>
+<div class="flex items-center gap-2 text-on-surface-variant">
+<span class="material-symbols-outlined text-sky-500 text-lg" data-icon="door_front">door_front</span>
+<span class="text-sm font-medium">4 Doors</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-6 border-t border-outline-variant/10">
+<span class="text-2xl font-bold text-primary">$127,800</span>
+<button onclick="window.open('https://wa.me/97150','_blank')" class="bg-on-surface text-white px-5 py-2 rounded-full text-sm font-bold hover:bg-sky-600 transition-colors">Details</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Premium Service Bento -->
+<section class="py-24 bg-surface-container-low px-8">
+<div class="max-w-screen-2xl mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-4 grid-rows-2 gap-6 h-auto md:h-[600px]">
+<div class="md:col-span-2 md:row-span-2 bg-primary rounded-lg p-12 text-white relative overflow-hidden group">
+<div class="relative z-10 flex flex-col h-full justify-between">
+<div>
+<h3 class="text-4xl font-headline font-extrabold mb-6">Expert Concierge <br/>Service</h3>
+<p class="text-lg text-white/80 max-w-md leading-relaxed">Our dedicated advisors handle every detail of your acquisition, from bespoke financing to global delivery logistics.</p>
+</div>
+<button class="bg-white text-primary w-fit px-8 py-3 rounded-full font-bold hover:bg-sky-50 transition-all">Schedule Consultation</button>
+</div>
+<span class="material-symbols-outlined absolute -bottom-10 -right-10 text-[240px] text-white/10 rotate-12" data-icon="support_agent">support_agent</span>
+</div>
+<div class="md:col-span-2 bg-surface-container-lowest rounded-lg p-10 flex items-center justify-between group hover:bg-sky-50 transition-colors duration-300">
+<div class="max-w-xs">
+<h4 class="text-2xl font-headline font-bold text-on-surface mb-2">Extended Warranty</h4>
+<p class="text-on-surface-variant/70">Comprehensive protection plans tailored for premium performance vehicles.</p>
+</div>
+<div class="w-16 h-16 bg-secondary-container rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-on-secondary-container text-3xl" data-icon="verified_user">verified_user</span>
+</div>
+</div>
+<div class="md:col-span-1 bg-surface-container-lowest rounded-lg p-10 flex flex-col justify-between group hover:bg-sky-50 transition-colors duration-300">
+<div class="w-12 h-12 bg-sky-100 rounded-lg flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-sky-600" data-icon="payments">payments</span>
+</div>
+<div>
+<h4 class="text-xl font-headline font-bold text-on-surface mb-1">Flexible Trade-In</h4>
+<p class="text-sm text-on-surface-variant/70">Fair market valuation for your current luxury car.</p>
+</div>
+</div>
+<div class="md:col-span-1 bg-surface-container-lowest rounded-lg p-10 flex flex-col justify-between group hover:bg-sky-50 transition-colors duration-300">
+<div class="w-12 h-12 bg-sky-100 rounded-lg flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-sky-600" data-icon="near_me">near_me</span>
+</div>
+<div>
+<h4 class="text-xl font-headline font-bold text-on-surface mb-1">Global Shipping</h4>
+<p class="text-sm text-on-surface-variant/70">Seamless delivery to any destination worldwide.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer id="footer" class="w-full border-t-0 bg-surface-container-low dark:bg-slate-950">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-8 px-12 py-16 max-w-screen-2xl mx-auto">
+<div class="col-span-1 md:col-span-1">
+<span class="text-lg font-extrabold text-on-surface dark:text-white font-headline block mb-4">EWAN ALMUTAMAIZ</span>
+<p class="text-on-surface-variant/70 dark:text-slate-500 text-sm leading-relaxed">
+                    The premier destination for luxury automotive excellence. Curating the world's finest vehicles for the most discerning collectors.
+                </p>
+<div class="flex gap-4 mt-6">
+<a class="text-sky-500 hover:text-sky-400 transition-colors" href="#"><span class="material-symbols-outlined" data-icon="public">public</span></a>
+<a class="text-sky-500 hover:text-sky-400 transition-colors" href="#"><span class="material-symbols-outlined" data-icon="mail">mail</span></a>
+<a class="text-sky-500 hover:text-sky-400 transition-colors" href="#"><span class="material-symbols-outlined" data-icon="share">share</span></a>
+</div>
+</div>
+<div>
+<h5 class="font-headline font-bold text-on-surface mb-6">Quick Links</h5>
+<ul class="space-y-4 font-inter text-sm">
+<li><a class="text-on-surface-variant/70 dark:text-slate-500 hover:text-sky-500 dark:hover:text-sky-300 transition-colors" href="#">About Us</a></li>
+<li><a class="text-on-surface-variant/70 dark:text-slate-500 hover:text-sky-500 dark:hover:text-sky-300 transition-colors" href="#">Inventory</a></li>
+<li><a class="text-on-surface-variant/70 dark:text-slate-500 hover:text-sky-500 dark:hover:text-sky-300 transition-colors" href="../car_listings/index.html?category=normal">Normal Cars</a></li>
+<li><a class="text-on-surface-variant/70 dark:text-slate-500 hover:text-sky-500 dark:hover:text-sky-300 transition-colors" href="../car_listings/index.html?category=luxury">Luxury Cars</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-headline font-bold text-on-surface mb-6">Support</h5>
+<ul class="space-y-4 font-inter text-sm">
+<li><a class="text-on-surface-variant/70 dark:text-slate-500 hover:text-sky-500 dark:hover:text-sky-300 transition-colors" href="#">Privacy Policy</a></li>
+<li><a class="text-on-surface-variant/70 dark:text-slate-500 hover:text-sky-500 dark:hover:text-sky-300 transition-colors" href="#">Terms of Service</a></li>
+<li><a class="text-on-surface-variant/70 dark:text-slate-500 hover:text-sky-500 dark:hover:text-sky-300 transition-colors" href="#" href="#footer">Contact Support</a></li>
+<li><a class="text-on-surface-variant/70 dark:text-slate-500 hover:text-sky-500 dark:hover:text-sky-300 transition-colors" href="#">FAQs</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-headline font-bold text-on-surface mb-6">Newsletter</h5>
+<p class="text-sm text-on-surface-variant/70 mb-4">Stay updated with our latest arrivals and exclusive events.</p>
+<div class="flex gap-2">
+<input class="bg-surface-container-high border-none rounded-full px-4 py-2 text-sm focus:ring-2 focus:ring-sky-500 w-full" placeholder="Email address" type="email"/>
+<button class="bg-primary text-white px-4 py-2 rounded-full"><span class="material-symbols-outlined" data-icon="send">send</span></button>
+</div>
+</div>
+</div>
+<div class="border-t border-outline-variant/10 max-w-screen-2xl mx-auto px-12 py-8 flex flex-col md:flex-row justify-between items-center gap-4">
+<span class="text-on-surface-variant/70 dark:text-slate-500 text-sm font-inter">© 2024 EWAN ALMUTAMAIZ GENERAL TRADING. All rights reserved.</span>
+<div class="flex items-center gap-6">
+<img alt="Payment Partner" class="h-6 grayscale opacity-50" data-alt="Monochrome minimalist logo of a major credit card provider" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBbL51uYaIyDfbmd13CgGXbRixJmtvmnuuZ7G_RQbizqH811H-0n2Qyop6m79mULh8Els7ulHbaAMPjQfeo06qny3jTVpM86lX5apfI1jmUDj59DvXIcrmZJlBQUwSHXjE5YPjmq7C_I1nsAWiGZErCLVL8lOAPjv6R_UuYKcECgTKMGm_NRAP8BPWSYt9uqq2bQogsK9xEjpv94rddxwdcBdmmIgzQMGTTzuYDS9eyysoE0pTZ0SOOQa7gtzgRpCHMqygopPThh_j0"/>
+<img alt="Payment Partner" class="h-6 grayscale opacity-50" data-alt="Monochrome minimalist logo of a global digital payment processor" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAnKMkKZwk42sV1JSuCKx_3Ygg_o5Eyjxx9pu6LqsicH3tAcZfkHQ8_OoGfx9FRlMWVO23L9VLztoULf46vqmPUB30soMrgYC4UGD19buYQ0AKLjbw5ejyuptuN4vmYsTVBAYofMR2571QeMg34Yn6B1DEYIeSw6a-84VtXw4yJIYzOek7ZQvrM_vDaiDtyu8Js3bmHP-BsAFn-nz2VC_rse8BO8VjqLHOaKA1a9hrM9PTW_0mJbw5o6DDKxWO-dhPu1xlVozAXYAoh"/>
+</div>
+</div>
+</footer>
+
+    <!-- Floating Interactive WhatsApp Button -->
+    <a href="https://wa.me/97150" target="_blank"
+       class="fixed bottom-8 right-8 z-50 group flex items-center justify-center w-16 h-16 rounded-full shadow-[0_8px_30px_rgb(37,211,102,0.4)] transition-all duration-300 hover:scale-110 hover:-translate-y-2 animate-bounce hover:animate-none">
+        <span class="absolute right-full mr-4 bg-surface-container-highest text-on-surface text-sm font-bold px-4 py-2 rounded-lg shadow-lg opacity-0 translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300 whitespace-nowrap pointer-events-none">
+            Chat with us!
+        </span>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" class="w-16 h-16 drop-shadow-lg" />
+    </a>
+</body></html>
